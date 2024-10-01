@@ -1,0 +1,137 @@
+*{
+   margin:0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Gilroy-Regular",sans-serif;
+}
+
+html,body{
+   height: 100%;
+   width: 100%;
+}
+
+#main{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   width: 100%;
+   background-color: rgb(155, 237, 155);
+}
+
+#box {
+   overflow: hidden;
+   border-radius: 15px;
+   height: 82%;
+   width: 82%;
+   background-color: white;
+}
+
+#btop{
+   height: 100px;
+   width: 100%;
+   background-color: rgb(98, 189, 75);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 8vw;
+}
+
+.elem{
+   display: flex;
+   gap: 30px;
+   /* justify-content: center; */
+   align-items: center;
+
+}
+.elem h2{
+   font-weight: 550;
+}
+.elem .boxes{
+   padding: 8px 15px;
+   /* height: 5vh;
+   width: 3vw; */
+   background-color: white;
+   
+   border-radius: 10px;
+   font-weight: 700;
+   font-size: 2.5vh;
+   color: rgb(45, 206, 45);
+}
+#bbottom{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 10px;
+   width: 100%;
+   height: calc(100% - 100px);
+   /* background-color: rgb(0, 0, 0); */
+   padding: 20px;
+}
+.bubble{
+   height: 50px;
+   width: 50px;
+   background-color: rgb(92, 142, 92);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: 600;
+
+}
+.bubble:hover {
+   background-color: rgba(0, 0, 0, 0.596);
+   cursor: pointer;
+   color:white;
+}
+@media (max-width: 768px) {
+   #box {
+      height: 85vh;
+      width: 90vw;
+   }
+   #btop{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+   }
+
+   .elem h2 {
+      font-size: 5vw;
+      
+   }
+
+   .elem .boxes {
+      font-size: 3vw;
+   }
+
+   .bubble {
+      height: 12vw;
+      width: 12vw;
+      font-size: 4vw;
+   }
+}
+@media (max-width: 480px) {
+   #btop{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+   }
+
+   .elem h2 {
+      font-size: 3vw;
+      
+   }
+
+   .elem .boxes {
+      font-size: 3vw;
+   }
+
+   .bubble {
+      height: 16vw;
+      width: 16vw;
+      font-size: 5vw;
+   }
+}
