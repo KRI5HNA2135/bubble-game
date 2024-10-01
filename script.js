@@ -3,15 +3,25 @@ var score = 0;
 var hitrn = 0;
 
 
-function makeBubble(){
+function makeBubble() {
    var clutter = "";
+   var bubbleSize = 60; // Approximate size of each bubble in pixels (adjust as needed)
+   var screenWidth = window.innerWidth;
+   var screenHeight = window.innerHeight;
 
-for(var i=1; i<=168;i++){
-   clutter += `<div class=bubble>${Math.floor(Math.random()*20)}</div>`
+   // Calculate how many bubbles fit in the available screen area
+   var bubblesPerRow = Math.floor(screenWidth / bubbleSize);
+   var rows = Math.floor(screenHeight / bubbleSize);
+   var totalBubbles = bubblesPerRow * rows;
+
+   for (var i = 1; i <= totalBubbles; i++) {
+       clutter += `<div class="bubble">${Math.floor(Math.random() * 20)}</div>`;
+   }
+
+   document.querySelector("#bbottom").innerHTML = clutter;
 }
 
-document.querySelector("#bbottom").innerHTML = clutter
-}
+window.addEventListener("resize", makeBubble);
 function runTimer(){
       var stop = setInterval(function () {
          if(timer > 0){
